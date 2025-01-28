@@ -1,0 +1,3 @@
+ListNode: val, prev, next 
+DoublyLL: head, tail --> insertAtHead, removeFromTail, deleteNode, printList
+Cache: unordered_map<int, ListNode*>, DoublyLL, capacity --> printCache, insert
