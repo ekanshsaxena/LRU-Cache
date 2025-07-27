@@ -4,16 +4,16 @@ using namespace std;
 class ListNode{
 public:
     int value;
-    ListNode *prev = NULL;
+    ListNode *previous = NULL;
     ListNode *next = NULL;
     ListNode(int value, ListNode *prev = NULL, ListNode *next = NULL){
         this->value = value;
-        this->prev = prev;
+        this->previous = prev;
         this->next = next;
     }
 };
 
-class DoublyLL{
+class DoublyLinkedList{
 private:
     // Actual head is at dummyHead->next.
     ListNode *dummyHead = new ListNode(-1);
@@ -47,7 +47,7 @@ public:
     }
 
     void deleteNode(ListNode *node){
-        ListNode *prev_node = node->prev;
+        ListNode *previous_node = node->prev;
         ListNode *next_node = node->next;
         prev_node->next = next_node;
         if(next_node) next_node->prev = prev_node;
